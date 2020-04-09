@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CHECKOUT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+.navbar{margin-bottom:0;border-radius:0;}
+.row.content{height:450px}
+.sidenav{padding-top:20px;background-color:#f1f1f1;height:100%;}
+li{font-size:medium;}
+footer{background-color:#555;color:white;padding:15px;}
+.imgcontainer{text-align:center;position:relative;}
+img.avatar{width:120%;height:120%;border-radius:50%;}
+body {font-family:Arial;font-size:17px; }
+*{box-sizing:border-box;}
+.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -16px;}
+.col-25{-ms-flex:25%;flex:25%;}
+.col-50{-ms-flex:50%;flex:50%;}
+.col-75{-ms-flex:75%;flex:75%;}
+.col-25,.col-50,.col-75{padding:0 16px;}
+.container{background-color:#f2f2f2;padding:5px 20px 15px 20px;border:1px solid lightgrey;border-radius:3px;}
+input[type=text]{width:100%;margin-bottom:20px;padding:12px;border:1px solid #ccc;border-radius:3px;}
+label{margin-bottom:10px;display:block;}
+.icon-container{margin-bottom:20px;padding:7px 0;font-size:24px;}
+#btn{background-color:#4CAF50;color:white;padding:12px;margin:10px 0;border:none;width:100%;border-radius:3px;cursor:pointer;font-size:17px;}
+#btn:hover{background-color:#45a049;}
+a{color:#2196F3;}
+hr{border:1px solid lightgrey;}
+span.price{float:right;color:grey;}
+</style>
+</head>
+<body bgcolor="99CCFF" link="green" alink="blue" vlink="red">
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#"><img src="2.png" height="20" width="20"></a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="FOOD FACTORY.html">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menus
+                <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                      <li class="dropdown-header">Burgers</li>
+                      <li><a href="#">KFC</a></li>
+                      <li><a href="#">Mc Donalds</a></li>
+                      <li><a href="#">Burger King</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header">Pizzas</li>
+                      <li><a href="#">Donimo's</a></li>
+                      <li><a href="#">Pizza Hut</a></li>
+                      <li><a href="#">Pizza Passion</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Subway</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Super Donuts</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Sandwiches</a></li>
+                    </ul>
+              </li>
+              <li><a href="comingsoon.html">Order Online</a></li>
+              <li><a href="checkout.html">Checkout</a></li>
+              <li><a href="ABOUT US.html">About Us</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" action="">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" id="mySearch">
+                    <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                    </div>
+                </div>
+              </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="LOG IN.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#login" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </nav>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn" id="btn">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container" ng-app="">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>{{pizza * price1 }}</b></span></h4>
+      <p><input type="checkbox" ng-model="pizza" ng-init="price1='399.99'"> Garden Delight Pizza <span class="price">₹399.99</span></p>
+      <p><input type="checkbox" ng-model="burger"> Maharaja Burger <span class="price">₹79.99</span></p>
+      <p><input type="checkbox" ng-model="subway"> Subway <span class="price">₹275.05</span></p>
+      <p><input type="checkbox" ng-model="chicken"> Chicken Munchurian <span class="price">₹299</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+  </div>
+</div>
+
+<div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title" align="middle">LOGIN</h3>
+            </div>
+            <div class="modal-body"><div class="row">
+              <div class="imgcontainer col-sm-2"><img src="img_avatar2.png" class="avatar"></div>
+      <form class="col-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Enter your username" required>
+        </div><br>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group"> 
+            <div class="checkbox">
+              <label><input type="checkbox"> Remember me</label>
+            </div>
+        </div>
+      </div></div>
+            <div class="modal-footer">
+              <button type="reset" class="btn btn-warning" onclick="clickConfirm()">Reset</button>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div></form>
+      
+        </div>
+      </div>
+
+    <script>
+        function clickConfirm()
+    {
+        confirm("Do you want to clear?");
+    }
+</script>
+
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".dropdown-menu li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+      $("#mySearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#form input").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+</script>
+
+</body>
+</html>

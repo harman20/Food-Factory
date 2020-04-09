@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FOOD FACTORY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="image/png" rel="icon" href="2.png" />
+  <style>
+    .navbar{margin-bottom:0;border-radius:0;}
+    .row.content{height:450px}
+    .sidenav{padding-top:20px;background-color:#f1f1f1;height:100%;}
+    li{font-size:medium;}
+    footer{background-color:#555;color:white;padding:15px;}
+    @media screen and (max-width: 767px) 
+    {
+      .sidenav{height:auto;padding:15px;}
+      .row.content{height:auto;} 
+    }
+    body{font-family:'Coiny',cursive;}
+    .carousel-caption{padding-bottom:250px;}
+    .carousel-caption h2{font-size:50px;text-transform:uppercase;}
+    .carousel-caption.right{background-image:none;}
+    .carousel-caption.left{background-image:none;}
+    header .carousel-inner .item{height:100vh;}
+    .imgcontainer{text-align:center;position:relative;}
+    img.avatar{width:120%;height:120%;border-radius:50%;}
+    .card{box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width:300px;margin:auto;text-align:center;font-family:arial;}
+    .price{color:grey;font-size:22px;}
+    .card button{border:none;outline:0;padding:12px;color:white;background-color:#000;text-align:center;cursor:pointer;width:100%;font-size:18px;}
+    .card button:hover{opacity:0.7;}
+  </style>
+</head>
+<body bgcolor="99CCFF">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="2.png" height="20" width="20"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="FOOD FACTORY.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menus
+        <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <input class="form-control" id="myInput" type="text" placeholder="Search..">
+              <li class="dropdown-header">Burgers</li>
+              <li><a href="#">KFC</a></li>
+              <li><a href="#">Mc Donalds</a></li>
+              <li><a href="#">Burger King</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Pizzas</li>
+              <li><a href="#">Donimo's</a></li>
+              <li><a href="#">Pizza Hut</a></li>
+              <li><a href="#">Pizza Passion</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Subway</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Super Donuts</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sandwiches</a></li>
+            </ul>
+      </li>
+      <li><a href="comingsoon.html">Order Online</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="ABOUT US.html">About Us</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" id="mySearch">
+          <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+          <i class="glyphicon glyphicon-search"></i>
+          </button>
+          </div>
+      </div>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="LOG IN.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#login" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+  
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" id="a1" >
+        <img src="kp.jpg" alt="..." style="width:100%;height:700px;">
+        <div class="carousel-caption">
+          <h1 class="animated bounceInRight" id="1" style="animation-delay:1s;display:none;color:black;background-color:white;">Shahi Panner</h1>
+          <h2 class="animated bounceInRight" id="2" style="animation-delay:2s;display:none;">Indians Authentication Code</h2>
+        </div>
+      </div>
+      <div class="item" id="a2" >
+        <img src="pz.jpg" alt="..." style="width:100%;height:700px;">
+        <div class="carousel-caption">
+          <h1 class="animated bounceInRight" id="3" style="animation-delay:1s;display:none;color:black;background-color:white;">Pizzza</h1>
+          <h2 class="animated bounceInRight" id="4" style="animation-delay:2s;display:none;">One Can Live Without Water But Not Pizza!!</h2>
+        </div>
+      </div>
+      <div class="item" id="a3" >
+        <img src="sl.jpg" alt="..." style="width:100%;height:700px;">
+        <div class="carousel-caption">
+          <h1 class="animated bounceInRight" id="5" style="animation-delay:1s;display:none;color:black;background-color:white;">Salad</h1>
+          <h2 class="animated bounceInRight" id="6" style="animation-delay:2s;display:none;">Be Fit With Premium Salad</h2>
+        </div>
+      </div>
+    </div>
+  
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<script>
+$(document).ready(function(){
+  $("#a1").mouseenter(function(){
+    $("#1").fadeIn(1000);
+    $("#2").fadeIn(1500);
+   });
+  $("#a2").mouseenter(function(){
+    $("#3").fadeIn(1000);
+    $("#4").fadeIn(1500);
+   });
+  $("#a3").mouseenter(function(){
+    $("#5").fadeIn(1000);
+    $("#6").fadeIn(1500);
+   });
+   $("#a1").mouseenter(function(){
+    $("#pa").fadeIn(5000);
+    });
+  });
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".dropdown-menu li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#mySearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".panel").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<div id="login" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title" align="middle">LOGIN</h3>
+      </div>
+      <div class="modal-body"><div class="row">
+        <div class="imgcontainer col-sm-2"><img src="img_avatar2.png" class="avatar"></div>
+<form class="col-sm-10">
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input type="text" class="form-control" placeholder="Enter your username" required>
+  </div><br>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input type="password" class="form-control" placeholder="Enter your password" required>
+  </div>
+  <div class="form-group"> 
+      <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+  </div>
+</div></div>
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-warning" onclick="clickConfirm()">Reset</button>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div></form>
+
+  </div>
+</div>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    
+<div class="col-sm-2 sidenav">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active"><img src="ad1.jpg"></div>
+    <div class="item"><img src="ad2.jpg"></div>
+    <div class="item"><img src="ad3.jpg"></div></div>
+  <a class="left carousel-control" href="#carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div><br>
+  <div id="carousel1" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel1" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active"><img src="ad4.jpg"></div>
+    <div class="item"><img src="ad5.jpg"></div></div>
+  <a class="left carousel-control" href="#carousel1" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel1" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+</div>
+
+  <div class="col-sm-8 text-left">
+     <!----<div style="background-color:#ffe6ff;">
+        <h2 id="paa">HISTORY BEHIND FOOD FACTORY</h2>
+        <img src="chef.png" align="right" style="margin-bottom:2500px;height:30%">
+        <p style="font-size:20px;display:none;" id="pa">Our story began in 2019, when Anant and Sanchit, the founders of<br>
+            this website, were thinking of something creative and suddenly<br>
+            the thought of making a food ordering site struck their mind and<br>
+            this is how this project began...<br><br>
+            You'll find different types of resturants and the exotic food items and the best sellars of some of the popular resturants on this website.</p>
+      </div>-->
+  </div>
+
+    <div class="col-sm-2 sidenav">
+      <div id="carousel2" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel2" data-slide-to="1"></li>
+    <li data-target="#carousel2" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active"><img src="ad6.jpg"></div>
+    <div class="item"><img src="ad7.jpg"></div>
+    <div class="item"><img src="ad8.jpg"></div></div>
+  <a class="left carousel-control" href="#carousel2" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel2" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div><br>
+  <div id="carousel3" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel3" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active"><img src="ad9.jpg"></div>
+    <div class="item"><img src="ad10.jpeg"></div></div>
+  <a class="left carousel-control" href="#carousel3" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel3" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+    </div>
+
+  </div>
+</div><br>
+<div class="row">
+    <div class="col-md-1" style="text-align:center;font-size:500%;text-shadow: 3px 2px red;">B<br>E<br>S<br>T<br></div>
+  <div class="col-md-10">
+      <div class="row">
+          <div class="card col-sm-4">
+              <img src="piz.jpg" style="width:100%">
+              <h3>Garden Delight Pizza</h3>
+              <p class="price"><a href="#" data-toggle="popover" data-trigger="hover" title="₹399.99 + taxes extra" data-content="GST: 16%">₹399.99</a></p>
+              <p>A vegetarian ensemble with mushrooms, black olives, pineapple and jalapenos.<br>
+              Baked with love by Dominos, this pizza is everyone's love.</p>
+              <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card col-sm-4">
+              <img src="bur.jpg" style="width:100%">
+              <h3>Maharaja Burger</h3>
+              <p class="price"><a href="#" data-toggle="popover" data-trigger="hover" title="₹79.99 + taxes extra" data-content="GST: 5%">₹79.99</a></p>
+              <p>A flame-grilled half-pound of beef topped with caramelized onions and American cheese. Finger's Lickin Good...<br>
+              A limited edition burger by Burger King.<br></p>
+              <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card col-sm-4">
+              <img src="sub.png" style="width:100%"><br><br>
+              <h3>Sub of the Day</h3>
+              <p class="price"><a href="#" data-toggle="popover" data-trigger="hover" title="₹275.05 + taxes extra" data-content="GST: 16%">₹275.05</a></p>
+              <p>Feel the taste of new Sub everyday only <br>on Subway from 11:00 am to 7:00 pm.<br>
+              The meal consists of one Sub, cold-drink and LAYS (or) cookie.</p>
+              <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card col-sm-4">
+              <img src="chicken.jpg" style="width:100%">
+              <h3>Chicken Manchurian</h3>
+              <p class="price"><a href="#" data-toggle="popover" data-trigger="hover" title="₹299 + taxes included" data-content="GST: 5% (included)">₹299</a> *</p>
+              <p>The exotic taste of Chicken with masala gravy<br>
+                <span style="font-size:8px">*Half plate at ₹299 and Full plate at ₹399</span></p>
+              <p><button>Add to Cart</button></p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-1" style="text-align:left;font-size:300%;text-shadow: 3px 2px red;">S<br>E<br>L<br>L<br>A<br>R<br>S</div>
+  </div>
+
+  <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover(); 
+      });
+  </script>
+
+<script>
+    function clickConfirm()
+  {
+    confirm("Do you want to clear?");
+  }
+</script>
+
+<footer class="container-fluid text-right" style="font-size:large">
+  <a href="https://www.instagram.com" target="_blank"><span class="fa fa-instagram"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.facebook.com" target="_blank"><span class="fa fa-facebook"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://twitter.com" target="_blank"><span class="fa fa-twitter"></span></a>&nbsp;&nbsp;
+</footer>
+
+</body>
+</html>
